@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #0f0f1a;
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 40px;
+    background: #1b1b2e;
+}
+
+.logo {
+    width: 80px;
+}
+
+section {
+    padding: 40px;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    margin: 10px 0;
+}
+
+.review {
+    background: #1b1b2e;
+    margin: 20px auto;
+    padding: 20px;
+    width: 60%;
+    border-radius: 10px;
+}
+
+.review img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+footer {
+    padding: 20px;
+    background: #111;
+}
