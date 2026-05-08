@@ -1,47 +1,66 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background: #0f0f1a;
+    font-family: Arial, sans-serif;
+    background: #0b0f1a;
     color: white;
     text-align: center;
 }
 
-header {
-    padding: 40px;
-    background: #1b1b2e;
+.hero {
+    padding: 60px;
+    background: linear-gradient(135deg, #11162a, #1c2350);
 }
 
 .logo {
-    width: 80px;
+    width: 90px;
 }
 
-section {
-    padding: 40px;
+.tagline {
+    opacity: 0.8;
 }
 
-.features ul {
-    list-style: none;
-    padding: 0;
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: #4f7cff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-.features li {
-    margin: 10px 0;
+.about, .features, .reviews {
+    padding: 50px;
 }
 
-.review {
-    background: #1b1b2e;
-    margin: 20px auto;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.card {
+    background: #1a1f36;
     padding: 20px;
-    width: 60%;
     border-radius: 10px;
 }
 
+.review {
+    background: #1a1f36;
+    margin: 20px auto;
+    padding: 20px;
+    width: 60%;
+    border-radius: 12px;
+}
+
 .review img {
-    width: 80px;
+    width: 70px;
     border-radius: 50%;
 }
 
 footer {
     padding: 20px;
-    background: #111;
+    background: #05070f;
 }
