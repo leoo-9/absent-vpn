@@ -1,95 +1,145 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
-    background: #121a2a;
-    color: #eaf0ff;
+    background: #0b1020;
+    color: #e8eeff;
 }
 
-/* TOP HERO */
-.hero {
-    padding: 80px 40px;
-    background: linear-gradient(135deg, #1d2b4f, #2c3f7a);
-    text-align: left;
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #121a33;
+    position: sticky;
+    top: 0;
 }
 
 .logo {
-    width: 340px;
-    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    color: #cdd6ff;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    padding: 100px 40px;
+    text-align: left;
+    background: linear-gradient(135deg, #1b2a55, #2c3f7a);
 }
 
 h1 {
     font-size: 42px;
-    margin: 10px 0;
-}
-
-.tagline {
-    font-size: 18px;
-    opacity: 0.85;
 }
 
 .btn {
-    margin-top: 20px;
-    padding: 12px 22px;
-    border: none;
+    padding: 12px 18px;
+    margin-right: 10px;
     background: #4f7cff;
+    border: none;
     color: white;
     border-radius: 8px;
-    font-weight: 600;
     cursor: pointer;
 }
 
+.secondary {
+    background: transparent;
+    border: 1px solid #4f7cff;
+}
+
 /* SECTIONS */
-.about, .features, .reviews {
-    padding: 60px 40px;
-    text-align: left;
-    max-width: 1000px;
-    margin: auto;
+.section {
+    padding: 70px 40px;
 }
 
-h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-/* FEATURES GRID */
+/* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 }
 
 .card {
-    background: #1b2540;
+    background: #1a2444;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* PRICING */
+.pricing {
+    display: flex;
+    gap: 20px;
+}
+
+.plan {
+    flex: 1;
+    background: #1a2444;
     padding: 20px;
     border-radius: 12px;
+}
+
+.highlight {
+    border: 2px solid #4f7cff;
 }
 
 /* REVIEWS */
 .review {
-    background: #1b2540;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 12px;
     display: flex;
     gap: 20px;
-    align-items: center;
+    background: #1a2444;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
 }
 
-/* FIX IMAGE ISSUE */
 .review img {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    display: block;
+}
+
+/* LOGIN */
+.login-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
 }
 
 /* FOOTER */
 footer {
-    padding: 30px;
-    background: #0c1220;
     text-align: center;
-    opacity: 0.7;
+    padding: 30px;
+    background: #0a0f1e;
+}
+
+/* ANIMATIONS */
+.fade {
+    animation: fadeIn 1s ease-in;
+}
+
+.slide {
+    animation: slideUp 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    from {transform: translateY(30px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
 }
