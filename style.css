@@ -2,59 +2,52 @@ body {
     margin: 0;
     font-family: "Inter", sans-serif;
     background: #0b1020;
-    color: #e8eeff;
+    color: #eaf0ff;
+}
+
+/* GLASS EFFECT */
+.glass {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
 }
 
 /* NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
-    background: #121a33;
+    padding: 15px 40px;
     position: sticky;
     top: 0;
 }
 
-.logo {
-    font-weight: 700;
-    font-size: 20px;
-}
-
-.nav-links a {
+.links a {
+    color: #cfd8ff;
     margin-left: 20px;
-    color: #cdd6ff;
     text-decoration: none;
 }
 
 /* HERO */
 .hero {
-    padding: 100px 40px;
-    text-align: left;
-    background: linear-gradient(135deg, #1b2a55, #2c3f7a);
+    text-align: center;
+    padding: 100px 20px;
 }
 
-h1 {
-    font-size: 42px;
+.logo-big {
+    width: 180px;
 }
 
-.btn {
-    padding: 12px 18px;
-    margin-right: 10px;
-    background: #4f7cff;
-    border: none;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.secondary {
-    background: transparent;
-    border: 1px solid #4f7cff;
+.typing {
+    overflow: hidden;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    animation: typing 3s steps(40, end);
 }
 
 /* SECTIONS */
 .section {
-    padding: 70px 40px;
+    padding: 80px 40px;
 }
 
 /* GRID */
@@ -65,9 +58,7 @@ h1 {
 }
 
 .card {
-    background: #1a2444;
     padding: 20px;
-    border-radius: 10px;
 }
 
 /* PRICING */
@@ -78,9 +69,7 @@ h1 {
 
 .plan {
     flex: 1;
-    background: #1a2444;
     padding: 20px;
-    border-radius: 12px;
 }
 
 .highlight {
@@ -91,10 +80,8 @@ h1 {
 .review {
     display: flex;
     gap: 20px;
-    background: #1a2444;
     padding: 20px;
     margin-top: 20px;
-    border-radius: 12px;
 }
 
 .review img {
@@ -104,35 +91,48 @@ h1 {
     object-fit: cover;
 }
 
-/* LOGIN */
-.login-box {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 300px;
-}
-
-input {
-    padding: 10px;
-    border-radius: 6px;
+/* BUTTONS */
+.btn {
+    padding: 12px 18px;
+    margin: 10px;
+    background: #4f7cff;
     border: none;
+    border-radius: 8px;
+    color: white;
 }
 
-/* FOOTER */
-footer {
+/* LOGIN */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle, #1a2a55, #0b1020);
+}
+
+.login-box {
     text-align: center;
-    padding: 30px;
-    background: #0a0f1e;
+    padding: 40px;
+}
+
+/* LOADER */
+.loader {
+    text-align: center;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #4f7cff;
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: auto;
 }
 
 /* ANIMATIONS */
-.fade {
-    animation: fadeIn 1s ease-in;
-}
-
-.slide {
-    animation: slideUp 1s ease-in;
-}
+.fade { animation: fadeIn 1s ease; }
+.slide { animation: slideUp 1s ease; }
 
 @keyframes fadeIn {
     from {opacity: 0;}
@@ -142,4 +142,13 @@ footer {
 @keyframes slideUp {
     from {transform: translateY(30px); opacity: 0;}
     to {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes spin {
+    to {transform: rotate(360deg);}
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
 }
