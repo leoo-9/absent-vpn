@@ -1,38 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Absent VPN</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Absent VPN</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Absent VPN</div>
+    <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#login">Login</a>
+    </div>
+</nav>
+
+<!-- HERO -->
 <header class="hero">
-    <img src="logo.png" class="logo">
-    <h1>Absent VPN</h1>
-    <p class="tagline">Invisible. Secure. Unlimited Freedom.</p>
-    <button class="btn">Download Now</button>
+    <h1 class="fade">Invisible. Secure. Unlimited Freedom.</h1>
+    <p class="fade">Built for privacy, speed, and trust.</p>
+
+    <div class="buttons">
+        <button class="btn">Download for Windows</button>
+        <button class="btn secondary">Download for Mac</button>
+    </div>
 </header>
 
-<section class="about">
-    <h2>What is Absent VPN?</h2>
-    <p>
-        Absent VPN protects your identity online by encrypting your connection,
-        hiding your location, and keeping your browsing private anywhere in the world.
-    </p>
-</section>
+<!-- FEATURES -->
+<section id="features" class="section slide">
+    <h2>Why Absent VPN?</h2>
 
-<section class="features">
-    <h2>Features</h2>
     <div class="grid">
         <div class="card">🔒 Military-grade encryption</div>
-        <div class="card">⚡ Ultra-fast servers</div>
-        <div class="card">🌍 Global access</div>
-        <div class="card">🛡️ No data logs</div>
+        <div class="card">⚡ Ultra-fast global servers</div>
+        <div class="card">🛡️ No user tracking (zero logs policy)</div>
+        <div class="card">🌍 Access worldwide content</div>
     </div>
 </section>
 
-<section class="reviews">
+<!-- PRICING -->
+<section id="pricing" class="section slide">
+    <h2>Pricing Plans</h2>
+
+    <div class="pricing">
+
+        <div class="plan">
+            <h3>Free</h3>
+            <p>$0 / month</p>
+            <ul>
+                <li>Basic VPN access</li>
+                <li>Limited speed</li>
+                <li>Ad-supported</li>
+            </ul>
+        </div>
+
+        <div class="plan highlight">
+            <h3>Pro</h3>
+            <p>$20 / month</p>
+            <ul>
+                <li>High-speed servers</li>
+                <li>No ads</li>
+                <li>Priority support</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="section slide">
     <h2>Customer Reviews</h2>
 
     <div class="review">
@@ -40,7 +83,7 @@
         <div>
             <h3>Carter W.</h3>
             <p>★★★★★</p>
-            <p>"Super smooth and fast. I use it every day on school Wi-Fi."</p>
+            <p>Feels fast, private, and simple. Works perfectly on school Wi-Fi.</p>
         </div>
     </div>
 
@@ -49,13 +92,24 @@
         <div>
             <h3>Rocco P.</h3>
             <p>★★★★★</p>
-            <p>"Vpn so Absent I felt invisible."</p>
+            <p>"Vpn So Absent I Felt Invisible."</p>
         </div>
     </div>
 </section>
 
+<!-- LOGIN -->
+<section id="login" class="section slide login">
+    <h2>Login Dashboard</h2>
+
+    <div class="login-box">
+        <input placeholder="Email">
+        <input placeholder="Password" type="password">
+        <button class="btn">Login</button>
+    </div>
+</section>
+
 <footer>
-    <p>© 2026 Absent VPN. All rights reserved.</p>
+    © 2026 Absent VPN. Built for privacy and trust.
 </footer>
 
 </body>
