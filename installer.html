@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Installing Absent VPN</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="install-body">
+
+<div class="install-box">
+    <h1>Installing Absent VPN</h1>
+
+    <p id="status">Preparing installation...</p>
+
+    <div class="bar">
+        <div class="progress" id="progress"></div>
+    </div>
+</div>
+
+<script>
+let progress = 0;
+let status = document.getElementById("status");
+let bar = document.getElementById("progress");
+
+let steps = [
+    "Connecting to secure servers...",
+    "Encrypting installation files...",
+    "Downloading components...",
+    "Finalizing setup...",
+    "Complete!"
+];
+
+let i = 0;
+
+let interval = setInterval(() => {
+    progress += 20;
+    bar.style.width = progress + "%";
+
+    status.innerText = steps[i];
+    i++;
+
+    if (progress >= 100) {
+        clearInterval(interval);
+        setTimeout(() => {
+            window.location.href = "AbsentVpn.html";
+        }, 1000);
+    }
+}, 800);
+</script>
+
+</body>
+</html>
